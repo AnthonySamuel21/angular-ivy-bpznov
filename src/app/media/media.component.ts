@@ -8,10 +8,16 @@ import { Boletim } from './boletim';
 })
 export class MediaComponent implements OnInit {
   boletim: Boletim;
+  resultado: number;
 
   constructor() {
     this.boletim = new Boletim();
+    this.resultado = 0;
   }
 
   ngOnInit() {}
+
+  calcular() {
+    this.resultado = this.boletim.calcularMedia();
+  }
 }
